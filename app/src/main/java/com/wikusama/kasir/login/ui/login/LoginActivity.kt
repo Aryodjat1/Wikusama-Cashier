@@ -12,9 +12,9 @@ import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
-import com.wikusama.kasir.login.databinding.ActivityLoginBinding
+import com.wikusama.kasir.R
+import com.wikusama.kasir.databinding.ActivityLoginBinding
 
-import com.wikusama.kasir.login.R
 
 class LoginActivity : AppCompatActivity() {
 
@@ -64,16 +64,16 @@ class LoginActivity : AppCompatActivity() {
             //Complete and destroy login activity once successful
             finish()
         })
-
-        username.afterTextChanged {
-            loginViewModel.loginDataChanged(
-                username.text.toString(),
+String()
                 password.text.toString()
-            )
+
         }
 
         password.apply {
             afterTextChanged {
+                username.afterTextChanged {
+                    loginViewModel.loginDataChanged(
+                        username.text.to
                 loginViewModel.loginDataChanged(
                     username.text.toString(),
                     password.text.toString()
