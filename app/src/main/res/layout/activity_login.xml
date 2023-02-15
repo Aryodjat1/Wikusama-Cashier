@@ -12,12 +12,14 @@
     tools:context=".login.ui.login.LoginActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:textSize="32sp"
         android:fontFamily="@font/poppins_bold"
         android:text="LOGIN"
+        android:textColor="@color/green"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,18 +27,19 @@
     <EditText
         android:id="@+id/username"
         android:layout_width="0dp"
-        android:padding="12dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:drawableStart="@drawable/ic_email"
-        android:fontFamily="@font/poppins_medium"
+        android:layout_marginTop="32dp"
         android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/poppins_medium"
         android:hint="@string/prompt_email"
         android:inputType="textEmailAddress"
+        android:padding="12dp"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
         android:id="@+id/password"
@@ -44,6 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:padding="12dp"
+        android:drawablePadding="8dp"
         android:background="@drawable/custom_input"
         android:drawableStart="@drawable/ic_lock"
         android:fontFamily="@font/poppins_medium"
@@ -56,21 +60,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="64dp"
-
-        android:enabled="false"
-        android:text="@string/action_sign_in"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:background="@drawable/rounded_button"
+        android:text="Login"
+        android:textColor="@color/white"
+        app:layout_constraintCircleRadius="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
     <ProgressBar
         android:id="@+id/loading"
